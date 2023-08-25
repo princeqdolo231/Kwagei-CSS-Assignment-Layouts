@@ -1,8 +1,92 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Layouts</title>
+        <style>
+                * {
+                    box-sizing: border-box;
+                }
+
+                body {
+                    margin: 0;
+
+                }
+
+                nav {
+                    overflow: hidden;
+                    background-color: #333;
+                }
+
+                nav a {
+                    float: left;
+                    display: block;
+                    text-align: center;
+                    color: #f2f2f2;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: large;
+                }
+
+                header {
+                    background-color: aliceblue;
+                    text-align: center;
+                    padding: 15px;
+                }
+
+                p {
+                    font-size: x-large;
+                }
+
+                #container {
+                    width: 100%;
+                    padding: 5%;
+                }
+
+                .Section {
+                    float: left;
+                    padding: 10px;
+                }
+
+                #Center-Section {
+                    width: 50%;
+                }
+
+                nav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+                #row::after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+
+                .Section.Side {
+                    width: 25%;
+                }
+        </style>
+    </head>
     <body>
-        <head>
-            <title>Layouts</title>
-        </head>
+        <div id="container">
+        <header>
+            <h1>LAYOUTS</h1>
+        </header>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/flexbox.html">Flexbox</a>
+        </nav>
+        <section class="Section Side" id="row">
+            <h2>A BRIEF HISTORY</h2> 
+            <p>
+                In the early days of the web, designs more complex than a simple document were 
+                laid out with < Table > elements. Separating HTML from visual styles was made easier 
+                when CSS was widely adopted by browsers in the late '90s. CSS opened the door to 
+                developers being able to completely change the look and feel of a website without 
+                ever touching HTML. This new capability inspired projects such as The CSS Zen Garden, 
+                which was created to demonstrate the power of CSS to encourage more developers to 
+                learn it.
+            </p>
+        </section>
+        </div>
     </body>
 </html>
